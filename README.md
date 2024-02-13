@@ -11,7 +11,6 @@ func resolve<Value>(_ factoryAdapter: KeyPath<FactoryContainer, FactoryAdapter<V
     FactoryContainer.shared[keyPath: factoryAdapter]()
 }
 
-
 struct FactoryContainer {
     static let shared = FactoryContainer()
 }
@@ -53,7 +52,7 @@ enum FactoryScope {
 ```
 
 ### Service definition
-```
+```swift
 protocol MyServiceProtocol {
     func getSomething() -> String
 }
@@ -72,7 +71,7 @@ struct MyService: MyServiceProtocol {
 ```
 
 ### Service Usage
-```
+```swift
 class MyViewModel {
     private let myService: MyServiceProtocol
 
@@ -129,7 +128,7 @@ enum FactoryScope {
 ```
 
 ### Service definition
-```
+```swift
 protocol MyServiceProtocol {
     func getSomething() -> String
 }
@@ -148,7 +147,7 @@ struct MyService: MyServiceProtocol {
 ```
 
 ### Service Usage
-```
+```swift
 class MyViewModel {
     private let myService: MyServiceProtocol
 
