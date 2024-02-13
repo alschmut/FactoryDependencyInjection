@@ -64,10 +64,10 @@
 				57ADB3C82B7B78A100C39F16 /* FactoryDependencyInjectionApp.swift */,
 				57ADB3CA2B7B78A100C39F16 /* ContentView.swift */,
 				57ADB3DA2B7B78C500C39F16 /* FactoryAdapter.swift */,
+				57ADB3DE2B7B7B8D00C39F16 /* MyService.swift */,
 				57ADB3CC2B7B78A200C39F16 /* Assets.xcassets */,
 				57ADB3D12B7B78A200C39F16 /* FactoryDependencyInjection.entitlements */,
 				57ADB3CE2B7B78A200C39F16 /* Preview Content */,
-				57ADB3DE2B7B7B8D00C39F16 /* MyService.swift */,
 			);
 			path = FactoryDependencyInjection;
 			sourceTree = "<group>";
