@@ -14,6 +14,7 @@
 		57ADB3D92B7B78B800C39F16 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 57ADB3D82B7B78B800C39F16 /* Factory */; };
 		57ADB3DB2B7B78C500C39F16 /* FactoryAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ADB3DA2B7B78C500C39F16 /* FactoryAdapter.swift */; };
 		57ADB3DF2B7B7B8D00C39F16 /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ADB3DE2B7B7B8D00C39F16 /* MyService.swift */; };
+		57ADB3E12B7B806400C39F16 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 57ADB3E02B7B806400C39F16 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		57ADB3D12B7B78A200C39F16 /* FactoryDependencyInjection.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FactoryDependencyInjection.entitlements; sourceTree = "<group>"; };
 		57ADB3DA2B7B78C500C39F16 /* FactoryAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryAdapter.swift; sourceTree = "<group>"; };
 		57ADB3DE2B7B7B8D00C39F16 /* MyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
+		57ADB3E02B7B806400C39F16 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		57ADB3C72B7B78A100C39F16 /* FactoryDependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
+				57ADB3E02B7B806400C39F16 /* README.md */,
 				57ADB3C82B7B78A100C39F16 /* FactoryDependencyInjectionApp.swift */,
 				57ADB3CA2B7B78A100C39F16 /* ContentView.swift */,
 				57ADB3DA2B7B78C500C39F16 /* FactoryAdapter.swift */,
@@ -141,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57ADB3E12B7B806400C39F16 /* README.md in Resources */,
 				57ADB3D02B7B78A200C39F16 /* Preview Assets.xcassets in Resources */,
 				57ADB3CD2B7B78A200C39F16 /* Assets.xcassets in Resources */,
 			);
