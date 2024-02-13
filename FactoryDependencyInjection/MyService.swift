@@ -16,18 +16,10 @@ protocol MyServiceProtocol {
 extension FactoryAdapter<MyServiceProtocol> {
     static let myService = FactoryAdapter {
         MyService()
-    } fixture: {
-        MyServiceFixture()
     }
 }
 
 struct MyService: MyServiceProtocol {
-    func getSomething() -> String {
-        return ""
-    }
-}
-
-struct MyServiceFixture: MyServiceProtocol {
     func getSomething() -> String {
         return ""
     }
