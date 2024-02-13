@@ -7,8 +7,13 @@
 
 import Factory
 
-func resolve<Value>(_ factoryAdapter: FactoryAdapter<Value>) -> Value {
-    factoryAdapter()
+func resolve<Value>(_ factoryAdapter: KeyPath<FactoryContainer, FactoryAdapter<Value>>) -> Value {
+    FactoryContainer.shared[keyPath: factoryAdapter]()
+}
+
+
+struct FactoryContainer {
+    static let shared = FactoryContainer()
 }
 
 struct FactoryAdapter<Value> {

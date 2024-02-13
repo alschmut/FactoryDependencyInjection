@@ -13,9 +13,9 @@ protocol MyServiceProtocol {
     func getSomething() -> String
 }
 
-extension FactoryAdapter<MyServiceProtocol> {
-    static let myService = FactoryAdapter {
-        MyService()
+extension FactoryContainer {
+    var myService: FactoryAdapter<MyServiceProtocol> {
+        FactoryAdapter { MyService() }
     }
 }
 
@@ -31,7 +31,7 @@ class MyViewModel {
     private let myService: MyServiceProtocol
 
     init(
-        myService: MyServiceProtocol = resolve(.myService)
+        myService: any MyServiceProtocol = resolve(\.myService)
     ) {
         self.myService = myService
     }
