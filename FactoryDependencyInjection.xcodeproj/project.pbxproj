@@ -44,6 +44,7 @@
 		57ADB3BC2B7B78A100C39F16 = {
 			isa = PBXGroup;
 			children = (
+				57ADB3E02B7B806400C39F16 /* README.md */,
 				57ADB3C72B7B78A100C39F16 /* FactoryDependencyInjection */,
 				57ADB3C62B7B78A100C39F16 /* Products */,
 			);
@@ -60,7 +61,6 @@
 		57ADB3C72B7B78A100C39F16 /* FactoryDependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
-				57ADB3E02B7B806400C39F16 /* README.md */,
 				57ADB3C82B7B78A100C39F16 /* FactoryDependencyInjectionApp.swift */,
 				57ADB3CA2B7B78A100C39F16 /* ContentView.swift */,
 				57ADB3DA2B7B78C500C39F16 /* FactoryAdapter.swift */,
