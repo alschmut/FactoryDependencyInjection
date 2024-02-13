@@ -5,6 +5,38 @@ To decouple the dependency injection framework [Factory](https://github.com/hmlo
 
 ## Using KeyPaths to access a defined service on one of possibly many containers
 
+### Service Usage
+```swift
+class MyViewModel {
+    private let myService: MyServiceProtocol
+
+    init(
+        myService: any MyServiceProtocol = resolve(\.myService)
+    ) {
+        self.myService = myService
+    }
+}
+```
+
+### Service definition
+```swift
+protocol MyServiceProtocol {
+    func getSomething() -> String
+}
+
+extension FactoryContainer {
+    var myService: FactoryAdapter<MyServiceProtocol> {
+        FactoryAdapter { MyService() }
+    }
+}
+
+struct MyService: MyServiceProtocol {
+    func getSomething() -> String {
+        return ""
+    }
+}
+```
+
 ### FactoryAdapter
 ```swift
 func resolve<Value>(_ factoryAdapter: KeyPath<FactoryContainer, FactoryAdapter<Value>>) -> Value {
@@ -51,15 +83,30 @@ enum FactoryScope {
 }
 ```
 
+## Using static variables on a single global container
+
+### Service Usage
+```swift
+class MyViewModel {
+    private let myService: MyServiceProtocol
+
+    init(
+        myService: any MyServiceProtocol = resolve(.myService)
+    ) {
+        self.myService = myService
+    }
+}
+```
+
 ### Service definition
 ```swift
 protocol MyServiceProtocol {
     func getSomething() -> String
 }
 
-extension FactoryContainer {
-    var myService: FactoryAdapter<MyServiceProtocol> {
-        FactoryAdapter { MyService() }
+extension FactoryAdapter<MyServiceProtocol> {
+    static let myService = FactoryAdapter {
+        MyService()
     }
 }
 
@@ -69,21 +116,6 @@ struct MyService: MyServiceProtocol {
     }
 }
 ```
-
-### Service Usage
-```swift
-class MyViewModel {
-    private let myService: MyServiceProtocol
-
-    init(
-        myService: any MyServiceProtocol = resolve(\.myService)
-    ) {
-        self.myService = myService
-    }
-}
-```
-
-## Using static variables on a single global container
 
 ### FactoryAdapter
 ```swift
@@ -124,37 +156,5 @@ enum FactoryScope {
     case singleton
     case cashed
     case shared
-}
-```
-
-### Service definition
-```swift
-protocol MyServiceProtocol {
-    func getSomething() -> String
-}
-
-extension FactoryAdapter<MyServiceProtocol> {
-    static let myService = FactoryAdapter {
-        MyService()
-    }
-}
-
-struct MyService: MyServiceProtocol {
-    func getSomething() -> String {
-        return ""
-    }
-}
-```
-
-### Service Usage
-```swift
-class MyViewModel {
-    private let myService: MyServiceProtocol
-
-    init(
-        myService: any MyServiceProtocol = resolve(.myService)
-    ) {
-        self.myService = myService
-    }
 }
 ```
